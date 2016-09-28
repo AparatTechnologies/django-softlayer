@@ -5,7 +5,10 @@ import os, sys, logging
 from cloudfiles.errors import NoSuchObject
 from object_storage.errors import NotFound
 
+from django.utils.deconstruct import deconstructible
 
+
+@deconstructible
 class SoftLayerStorage(CloudFilesStorage):
 
     """
